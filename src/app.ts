@@ -8,11 +8,11 @@ export const app = express();
 
 
 app.use(express.json({ limit: '5mb' }));
-app.use(cors({ 
-  origin: 'http://localhost:3000', 
-  credentials: true 
-}));
+app.use(cors());
 
+app.get('/', (req, res) => {
+    res.send('jobs-api');
+});
 
 app.use('/api/v1', AuthRouter)
 app.use('/api/v1', jobRouter)
