@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
 app.use('/api/v1', AuthRouter)
 app.use('/api/v1', jobRouter)
 
+
 app.use('/test', (req: Request, res: Response, next: NextFunction) => {
     res.status(200).send('testing')
 })

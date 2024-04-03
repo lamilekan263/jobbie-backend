@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "rimraf dist && tsc",
+    "build": "rm -rf dist/ && tsc -p tsconfig.build.json",
     "ts.check": "tsc --project tsconfig.json",
     "add-build": "git add dist"
   },
