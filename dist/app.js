@@ -11,7 +11,12 @@ const routes_1 = require("./routes");
 exports.app = (0, express_1.default)();
 exports.app.use(express_1.default.urlencoded({ extended: true }));
 exports.app.use(express_1.default.json({ limit: '5mb' }));
-exports.app.use((0, cors_1.default)());
+exports.app.use((0, cors_1.default)({
+    origin: [
+        'https://jobbie-frontend.vercel.app/',
+        'http://localhost:3000'
+    ]
+}));
 exports.app.get('/', (req, res) => {
     res.send('jobs-api');
 });

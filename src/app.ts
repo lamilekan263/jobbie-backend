@@ -8,7 +8,12 @@ export const app = express();
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json({ limit: '5mb' }));
-app.use(cors());
+app.use(cors({
+    origin: [
+        'https://jobbie-frontend.vercel.app/',
+        'http://localhost:3000'
+    ]
+}));
 
 app.get('/', (req, res) => {
     res.send('jobs-api');
