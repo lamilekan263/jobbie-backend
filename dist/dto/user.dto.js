@@ -9,6 +9,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoginUserDto = exports.CreateUserDto = void 0;
 const class_validator_1 = require("class-validator");
 class CreateUserDto {
+    name;
+    email;
+    password;
 }
 exports.CreateUserDto = CreateUserDto;
 __decorate([
@@ -23,6 +26,8 @@ __decorate([
     (0, class_validator_1.Length)(6)
 ], CreateUserDto.prototype, "password", void 0);
 class LoginUserDto {
+    email;
+    password;
 }
 exports.LoginUserDto = LoginUserDto;
 __decorate([

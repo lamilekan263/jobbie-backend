@@ -14,6 +14,7 @@ class Database {
             console.log(`database connected successfull ${connectDb.connection.host}`)
         } catch (error) {
             console.log('Error connecting to the database')
+            console.log(error)
             setTimeout(this.connectDatabase, 5000)
         }
     }

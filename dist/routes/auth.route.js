@@ -6,10 +6,10 @@ const controllers_1 = require("../controllers");
 const middleware_1 = require("../middleware");
 const dto_1 = require("../dto");
 class AuthRoute {
+    router = (0, express_1.Router)();
+    authController = new controllers_1.AuthController();
+    path = '/auth';
     constructor() {
-        this.router = (0, express_1.Router)();
-        this.authController = new controllers_1.AuthController();
-        this.path = '/auth';
         this.initializeRoute();
     }
     initializeRoute() {

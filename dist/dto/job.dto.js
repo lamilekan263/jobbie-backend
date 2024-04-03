@@ -9,6 +9,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateJobdto = void 0;
 const class_validator_1 = require("class-validator");
 class CreateJobdto {
+    company;
+    role;
+    description;
+    // @IsDate({ message: 'Applied date must be a valid date' })
+    appliedDate;
+    // @IsIn(['interviewing', 'applied', 'hired', 'rejected', 'closed'])
+    status;
+    userId;
 }
 exports.CreateJobdto = CreateJobdto;
 __decorate([

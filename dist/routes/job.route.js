@@ -6,10 +6,10 @@ const controllers_1 = require("../controllers");
 const middleware_1 = require("../middleware");
 const dto_1 = require("../dto");
 class JobRoute {
+    path = '/jobs';
+    router = (0, express_1.Router)();
+    jobController = new controllers_1.JobController();
     constructor() {
-        this.path = '/jobs';
-        this.router = (0, express_1.Router)();
-        this.jobController = new controllers_1.JobController();
         this.initializeRoutes();
     }
     initializeRoutes() {
